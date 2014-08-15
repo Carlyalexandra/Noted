@@ -1,4 +1,4 @@
-		<div id="main_show">
+<div id="main_show">
 		<div id="project_title">
 			<% if user_signed_in? and @project %>
 				<%= content_tag :h1, best_in_place(@project, :title, :path => user_project_path(current_user, @project.id)) %> 
@@ -6,12 +6,18 @@
 	    </div>
 		<br> 
 
+	<section id="main_area">	
+		<div id="subject">
+			<iframe width="560" height="315" src="//www.youtube.com/embed/4qquQNxKJxw?rel=0" frameborder="0" allowfullscreen></iframe>
+		</div>
 		<div id="notes">
 			<div class="note_pad">
-				<% if @note.video_url %>
-				<%= @note.video_url %>
-				<% end %>
+					<% if @note.video_url %>
+					<%= @note.video_url %>
+					<% end %>
 				<%= best_in_place @note, :title, :path => user_project_note_path(current_user, @project.id, @note.id) %> <br>
 				<%= best_in_place @note, :body, :path => user_project_note_path(current_user, @project.id, @note.id) %>
 			</div>
-		</div>	
+		</div>
+	</section>		
+</div>

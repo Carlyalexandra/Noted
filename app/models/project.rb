@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
   belongs_to :user
-  has_many :notes
+  has_many :notes, :dependent => :destroy
 
   
   after_create :make_note

@@ -1,6 +1,6 @@
-<h1>THIS IS WHERE A LIST OF ALL THE PROJECTS GO</h1>
+<h1>CURRENT PROJECTS</h1>
 <ul>
-<% @projects.each do |project| %>
+<% current_user.projects.each do |project| %>
 	<li><%= link_to project.title, user_project_path(current_user, project.id) %>
 	<%= link_to "x", user_project_path(current_user, project.id), method: :delete%>
 	</li>

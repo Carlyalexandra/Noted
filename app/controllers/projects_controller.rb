@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
- before_action :authenticate_user!, except: :show
+ before_action :authenticate_user!
   
   def index
     @projects = Project.all
@@ -10,6 +10,10 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
+    @project.user = current_user
+    @project.save
+
+    redirect_to user_projects_path(current_user)
   end
 
 
@@ -47,7 +51,7 @@ end
 
   private
   def project_params
-    params.require(:project).permit(:title)
+    params.require(:project).permit(:title, :user_id)
   end
 
 end

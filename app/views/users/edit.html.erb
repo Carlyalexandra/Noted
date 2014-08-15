@@ -1,3 +1,8 @@
 <h1>EDIT CURRENT USER HERE!!</h1>
 
+<%= form_for current_user do |f| %>
+	<%= f.text_field :email, placeholder: current_user.email %> <br>
+	<%= f.submit :change %>
+<% end %>
+
 <%= link_to "back to user", user_path(current_user) %>
