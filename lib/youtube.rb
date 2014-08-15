@@ -25,7 +25,7 @@ class Youtube
     def main(q)
       opts = Trollop::options do
         opt :q, 'Search term', :type => String, :default => 'Taking Notes'
-        opt :max_results, 'Max results', :type => :int, :default => 3
+        opt :max_results, 'Max results', :type => :int, :default => 6
       end
 
       client, youtube = get_service

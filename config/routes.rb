@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'search', to: 'users#search'
+
   devise_for :users, :except => [:sign_in]
   resources :users do
   resources :projects do 
