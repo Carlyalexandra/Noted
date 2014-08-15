@@ -1,10 +1,11 @@
-<div id="search">
+	<div id="search">
 			<%= form_tag user_path(current_user), :method => 'get', id: 'inputs' do %>
 	    	<%= text_field_tag :q, nil, placeholder: 'Enter search term' %>
-	    	<%= submit_tag "Submit", :id => "commit" %>
-	<% end %>
+	    	<%= submit_tag "", :id => "commit"%> 
+			<% end %>
+		
 	</div>
 
-	<div id="searched"><%=@q %></div> 
+	
 
 	

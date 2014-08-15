@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
  before_action :authenticate_user!, except: :show
+  
   def index
     @projects = Project.all
   end
@@ -8,6 +9,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    @project = Project.new(project_params)
   end
 
 
@@ -38,6 +40,9 @@ end
   end
 
   def destroy
+    @project = Project.find(params[:id])
+    @project.delete
+    redirect_to user_projects_path(current_user)
   end
 
   private

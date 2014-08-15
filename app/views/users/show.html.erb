@@ -1,45 +1,40 @@
 <div id="wrapperu">
 	
-	<div id="seach_bar">
+	<div id="search_bar">
 	
 	<%= render partial: 'shared/search' %>
+	
 
 	</div>
-	<div id="project_title">
-		<% if user_signed_in? and @project %>
-			<%= content_tag :h1, best_in_place(@project, :title, :path => user_project_path(current_user, @project.id)) %> 
-		<% end %>
-    </div>
-<br> <br> <br>	
-	<div id="video">
-		<ul id="vids"> 
-	<% i = 1 %>
-		<% @main.each do |video| %>
-	<%=	"<li id='videos_#{i}'><iframe width='400' height='250' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe> </li>".html_safe %> 
-	<%= "Click here if you want to use this video" %> <br> <br> <br>
-	<% i += 1 %>
-		<% end %>
-	</ul>
-	</div>
-
-	<div id="notes">
-		<div class="note_pad">
-			<% if @note.video_url %>
-			<%= @note.video_url %>
+	<br><br>
+	<div id="main_show">
+		<div id="project_title">
+			<% if user_signed_in? and @project %>
+				<%= content_tag :h1, best_in_place(@project, :title, :path => user_project_path(current_user, @project.id)) %> 
 			<% end %>
-			<%= best_in_place @note, :title, :path => user_project_note_path(current_user, @project.id, @note.id) %> <br>
-			<%= best_in_place @note, :body, :path => user_project_note_path(current_user, @project.id, @note.id) %>
+	    </div>
+		<br> 
+		
+		<div id="video">
+			<ul id="vids"> 
+		<% i = 1 %>
+			<% @main.each do |video| %>
+		<%=	"<li id='videos_#{i}'><iframe width='400' height='250' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe> </li>".html_safe %> 
+		<%= "Click here if you want to use this video" %> <br> <br> <br>
+		<% i += 1 %>
+			<% end %>
+		</ul>
 		</div>
+
+		<div id="notes">
+			<div class="note_pad">
+				<% if @note.video_url %>
+				<%= @note.video_url %>
+				<% end %>
+				<%= best_in_place @note, :title, :path => user_project_note_path(current_user, @project.id, @note.id) %> <br>
+				<%= best_in_place @note, :body, :path => user_project_note_path(current_user, @project.id, @note.id) %>
+			</div>
+		</div>	
 	</div>
-
-
-
-
-
-
-
-
-
-
 
 </div>
