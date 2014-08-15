@@ -1,0 +1,7 @@
+<%= content_tag_for :div, card do %>
+		<div class ="header">
+		    <div class="nav" ><%= link_to "x", project_card_path(@project, card), method: :delete, remote: true %></div>
+			<%= content_tag :h3, best_in_place(card, :title, path: project_card_path(@project, card))%>
+		</div>
+		<%= content_tag :p, best_in_place(card, :body, path: project_card_path(@project, card)) %>
+	<% end %>

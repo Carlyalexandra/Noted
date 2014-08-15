@@ -1,0 +1,48 @@
+class ProjectsController < ApplicationController
+ before_action :authenticate_user!, except: :show
+  def index
+    @projects = Project.all
+  end
+
+  def new
+  end
+
+  def create
+  end
+
+
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+def update
+  @project = Project.find(params[:id])
+  if @project.update(project_params)
+    respond_to do |format|
+      format.html {redirect_to (current_user), notice: "Project updated"}
+      format.json { respond_with_bip(@project) }
+    end
+  else
+     respond_to do |format|
+      format.html {render :edit}
+      format.json { respond_with_bip(@project) }
+    end
+  end 
+end
+
+
+  def show
+    @project = Project.find(params[:id])
+  	@notes = @project.notes.all
+
+  end
+
+  def destroy
+  end
+
+  private
+  def project_params
+    params.require(:project).permit(:title)
+  end
+
+end

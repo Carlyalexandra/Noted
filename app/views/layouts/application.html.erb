@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Noted</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!--  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'> -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav>
+<% if notice %><p id="notice"><%= notice %> <%= content_tag :span, 'x', class: "dismiss" %> </p><% end %>
+    <% if alert %><p id="alert"><%= alert %> <%= content_tag :span, 'x', class: "dismiss" %> </p><% end %>
+
+
+<p id="logo"><%= link_to 'Noted', user_path(current_user) %></p>
+	<ul id="login">
+		<% if current_user %>
+		<li><p id="welcome"><%= "#{current_user.email}" %> |  <%= link_to "Log Out", destroy_user_session_path, method: "delete" %></p></li> <br>
+		<li><%= link_to "Edit Your Account", edit_user_path(current_user) %>
+		</li>
+		<li>
+			<%= link_to 'projects', user_projects_path(current_user) %>
+		</li>
+		<% end %>	
+		<br>
+	</ul>	
+ <hr>
+</nav>
+<%= yield %>
+
+</body>
+</html>
