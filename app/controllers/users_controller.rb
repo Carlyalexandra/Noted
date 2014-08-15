@@ -11,8 +11,7 @@ before_action :authenticate_user!, except: :show
   end
 
   def show
-      @project = User.find(params[:id]).projects.last
-      @note = @project.notes.first
+    
   end
 
   def edit

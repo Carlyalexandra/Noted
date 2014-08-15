@@ -4,10 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :projects, :dependent => :destroy
-  after_create :make_project
+  has_many :notes, :dependent => :destroy
 
-  def make_project
-   	self.projects.create(title: "NEW PROJECT") 	
-   end
+
+  # def make_project
+  #  	self.projects.create(title: "NEW PROJECT") 	
+  #  end
 end

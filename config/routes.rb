@@ -4,10 +4,10 @@ Rails.application.routes.draw do
 
   devise_for :users, :except => [:sign_in]
   resources :users do
-  resources :projects do 
     resources :notes
   end
-end
+
+post 'save_as_pdf' => "notes#save_as_pdf"
 
 
 

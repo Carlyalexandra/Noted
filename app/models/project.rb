@@ -1,11 +1,11 @@
 class Project < ActiveRecord::Base
-  belongs_to :user
-  has_many :notes, :dependent => :destroy
+  # belongs_to :user
+  # has_many :notes, :dependent => :destroy
 
   
-  after_create :make_note
+  # after_create :make_note
 
-  def make_note
-  	self.notes.create(title: "???", body: "Write something special...")
-  end
+  # def make_note
+  # 	self.notes.create(title: "???", body: "Write something special...")
+  # end
 end

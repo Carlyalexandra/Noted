@@ -109,7 +109,11 @@ GEM
       daemon_controller (>= 1.2.0)
       rack
       rake (>= 0.8.1)
+    pdf-core (0.2.5)
     polyglot (0.3.5)
+    prawn (1.2.1)
+      pdf-core (~> 0.2.5)
+      ttfunk (~> 1.2.0)
     quiet_assets (1.0.3)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
@@ -189,6 +193,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     trollop (2.0)
+    ttfunk (1.2.0)
     turbolinks (2.2.2)
       coffee-rails
     tzinfo (1.2.2)
@@ -217,6 +222,7 @@ DEPENDENCIES
   json
   newrelic_rpm
   passenger
+  prawn (~> 1.2.1)
   quiet_assets
   rails (= 4.1.4)
   rest-client

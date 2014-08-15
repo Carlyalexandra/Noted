@@ -1,0 +1,7 @@
+<div id="all_notes">
+	<ul>
+	<% @notes.each do |note| %>
+		<li><%= link_to note.title, user_note_path(current_user, note.id) %> | <%= link_to "x", user_note_path(current_user, note.id), method: "delete" %></li> 
+		<%end%>
+	</ul>
+</div>

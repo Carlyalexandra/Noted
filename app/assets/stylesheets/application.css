@@ -40,11 +40,6 @@ nav {
 }
 
 
-#wrappernote_show {
-	border: solid;
-	margin-top: 40px;
-}
-
 .note_pad {
 	width: 600px;
 	height: 800px;
@@ -62,11 +57,6 @@ nav {
 
 #video li {
 	display: inline-block;
-}
-
-#project_title {
-	margin-left: 530px;
-
 }
 
 #login li{
@@ -121,14 +111,15 @@ nav {
 
 }
 
-#notes, #subject {
-	display: inline-block;
+#note_video, #note {
+	float: left;
 }
 
-/*#main_area {
-	
-	width: auto;
-	text-align: center;
-	border:solid;
+#note_main {
+	width: 95%;
+	margin: 0 auto;
+}
 
-}*/
+#note_video {
+	margin-right: 45px;
+}

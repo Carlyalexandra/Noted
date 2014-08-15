@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140814182707) do
+ActiveRecord::Schema.define(version: 20140815180638) do
 
   create_table "notes", force: true do |t|
-    t.integer  "project_id"
     t.string   "title"
     t.string   "video_url"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
-  add_index "notes", ["project_id"], name: "index_notes_on_project_id"
+  add_index "notes", ["user_id"], name: "index_notes_on_user_id"
 
   create_table "projects", force: true do |t|
     t.integer  "user_id"

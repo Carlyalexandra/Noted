@@ -1,7 +1,12 @@
 class NotesController < ApplicationController
+  before_action :authenticate_user!
+  
+  def index
+    @notes = current_user.notes.all
+  end
+
   def show
     @note = Note.find(params[:id])
-    @project = Project.find(params[:project_id])
   end
 
   def new
@@ -10,12 +15,12 @@ class NotesController < ApplicationController
 
   def create
   	@note = Note.new(note_params)
+    @note.user = current_user
   	@note.body = "Something brilliant here..."
-  	@note.project = Project.find(params[:project_id])
-
+    @note.title = "TAKING NOTES"
   	if @note.save
   		respond_to do |format|
-  			format.html {redirect_to (current_user), notice: "New note Created"}
+  			format.html {redirect_to user_note_path(current_user,@note.id), notice: "New note Created"}
   			format.js {}
   		end
   	else
@@ -29,12 +34,15 @@ class NotesController < ApplicationController
   def destroy
 	@note = Note.find(params[:id])
 	@note.destroy
-	@project = Project.find(params[:project_id])
         respond_to do |format|
-  			format.html {redirect_to (current_user), notice: "note deleted"}
+  			format.html {redirect_to user_notes_path(current_user), notice: "note deleted"}
   			format.js {head :no_content}
   		end
    end	
+
+   def save_as_pdf
+
+   end
 
   def edit
   	@note = Note.find(params[:id])
@@ -58,11 +66,11 @@ end
 
   private
   def note_params
-  	params.require(:note).permit(:project_id, :body, :title, :video_url)
+  	params.require(:note).permit(:user_id, :body, :title, :video_url)
   end
 
-  def set_project
-  	@project = Project.find(params[:project_id])
-  end
+  # def set_project
+  # 	@project = Project.find(params[:project_id])
+  # end
 
 end

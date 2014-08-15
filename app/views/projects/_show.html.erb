@@ -1,0 +1,19 @@
+<div id="wrappernote_show">	
+
+ 
+<%= best_in_place @project, :title, :path => user_project_path(current_user, @project.id) %> <br> <br> <br>
+
+<% @notes.each do |note| %>
+
+<%=link_to "CLICK TO SEE THIS NOTE", user_project_note_path(current_user, @project.id, note.id)  %>
+<div class="note_pad">
+<%= best_in_place note, :title, :path =>user_project_note_path(current_user, @project.id, note.id) %><br>
+<%= best_in_place note, :body, :path =>user_project_note_path(current_user, @project.id, note.id)  %> 
+<% end %>
+</div>
+
+<br>
+<%= link_to "back to projects", user_projects_path(current_user) %>
+
+
+</div>

@@ -34,6 +34,7 @@ gem 'newrelic_rpm'
 gem 'best_in_place', :git => 'https://github.com/aaronchi/best_in_place.git'
 gem 'jquery-ui-rails'
 gem 'devise'
+gem 'prawn', '~> 1.2.1'
 
 group :test, :development do
 	gem 'rspec'
