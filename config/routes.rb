@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :notes
   end
 
-post 'save_as_pdf' => "notes#save_as_pdf"
+  post 'save_as_pdf/:id', to: "notes#save_as_pdf", as: 'save_as_pdf'
 
 
 

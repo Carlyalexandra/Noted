@@ -1,4 +1,6 @@
 class NotesController < ApplicationController
+  require 'prawn'
+
   before_action :authenticate_user!
   
   def index
@@ -17,7 +19,6 @@ class NotesController < ApplicationController
   	@note = Note.new(note_params)
     @note.user = current_user
   	@note.body = "Something brilliant here..."
-    @note.title = "TAKING NOTES"
   	if @note.save
   		respond_to do |format|
   			format.html {redirect_to user_note_path(current_user,@note.id), notice: "New note Created"}
@@ -41,8 +42,21 @@ class NotesController < ApplicationController
    end	
 
    def save_as_pdf
-
-   end
+    @note = Note.find(params[:id])
+      ### Generates the PDF to be sent to Lob API for print
+            Prawn::Document.generate("public/'#{@note.title}'.pdf") do |pdf|
+            # pdf.image "public/card_templates/#{@card_templates.find_by(id: @card.card_template_id).template_path}", :position => :center, :width => 738, :height => 522
+            # pdf.start_new_page
+              pdf.text "#{@note.title}"
+              pdf.text "#{@note.video_url}"
+              pdf.text_box "#{@note.body}",
+              :overflow => :shrink_to_fit,
+              :min_font_size => 10,
+              :disable_wrap_by_char => true
+              
+            end 
+            redirect_to user_note_path(current_user, @note.id)         
+      end
 
   def edit
   	@note = Note.find(params[:id])

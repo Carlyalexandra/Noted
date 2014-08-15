@@ -1,15 +1,17 @@
-<h1>NOTE</h1>
+
 <br><br>
 	<div id="note_main">	
 		<div id="note_video">
 			<%=	"<iframe width='560' height='315' src='//www.youtube.com/embed/#{@note.video_url}?rel=0' frameborder='0'></iframe><p>".html_safe %>
 		</div>
 		
-		<div class="note_pad", id="note">
-				<%= best_in_place @note, :title, :path => user_note_path(current_user, @note.id) %> <br>
-				<%= best_in_place @note, :body, :path => user_note_path(current_user, @note.id) %>
+		<div id="note">
+		<%= link_to "Download PDF", save_as_pdf_path(@note), method: :post %>
+			<div class="note_pad">
+					<span class="title"><%= best_in_place @note, :title, :path => user_note_path(current_user, @note.id)%></span> <br>
+					<%= best_in_place @note, :body, :path => user_note_path(current_user, @note.id) %>
+			</div>
 		</div>
-
 	</div>
 <br style="clear:both;">
 <%= link_to "back to user", user_path(current_user) %>

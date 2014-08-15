@@ -42,7 +42,7 @@ nav {
 
 .note_pad {
 	width: 600px;
-	height: 800px;
+	height: 700px;
 	background: url(http://i.stack.imgur.com/ynxjD.png) repeat-y;
  	font: normal 14px verdana;
  	line-height: 25px;
@@ -122,4 +122,9 @@ nav {
 
 #note_video {
 	margin-right: 45px;
+}
+
+.title {
+	font-size: 20px;
+	text-decoration: none;
 }
