@@ -14,16 +14,14 @@
 		
 		<div id="video">
 			<ul id="vids"> 
-			<% i = 1 %>
 			<% if !@q.blank? %>
 			<%= content_tag :h1, @q %>
 					<% @main.each do |video| %>
-						<%=	"<li id='videos_#{i}'><iframe width='400' height='250' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe><p>".html_safe %> <%= link_to 'Click to use this video', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title]}), {method: :post} %><%= image_tag "#{video[:thumbnail]}" %> <%= "</p><br><br></li>".html_safe %> 
-	
-						<% i += 1 %>
-						<% image_tag "#{video[:thumbnail]}" %>
+					<%= image_tag "#{video[:thumbnail]}", class: "thumbnail" %>
 					<% end %>
 				</ul>
+			
+
 			<% elsif current_user.notes.count > 0 %>
 				<div><h1>at least one project</h1></div>
 			<% else %>

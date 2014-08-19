@@ -26,9 +26,22 @@ $(document).on('ready page:load', function () {
 	// })
 
 	
+	$('.video').hide();
 
-	$(".dismiss").on('click', function (event) {
+	$(".dismiss").on('click', function (event) {	
 		$(event.target).closest('p').slideUp()
 	});
+
+	$('.thumbnail').on('click', function () {
+		$('.thumbnail').fadeOut(function(){
+			$('#test').show()
+		});
+	});
+
+	
+
+
+
+
 
 });
