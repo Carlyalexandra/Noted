@@ -33,17 +33,14 @@ $(document).on('ready page:load', function () {
 	});
 
 
-	function update_player(data_id)
-		
+	//function update_player(data_id)
+
 
 
 	$('.thumbnail').on('click', function () {
-		$('.thumbnail').fadeOut(function(){
-			$('#test').show()
+			$('#video_player').html($(this).data("id"));
 		});
-	});
 
-	
 
 
 
