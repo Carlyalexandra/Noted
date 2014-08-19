@@ -40,6 +40,8 @@ group :test, :development do
 	gem 'rspec'
 	gem 'rspec-rails'
 	gem 'database_cleaner'
+	gem 'vcr'
+	gem 'webmock'
 end
 
 group :development do

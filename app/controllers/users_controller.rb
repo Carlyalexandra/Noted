@@ -40,7 +40,7 @@ before_action :authenticate_user!, except: :show
   private 
   
   def user_params
-    params.require(:user).permit(:email)
+    params.require(:user).permit(:email, :fname, :lname)
   end
 
 end

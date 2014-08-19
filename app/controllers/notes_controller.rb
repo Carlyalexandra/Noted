@@ -36,10 +36,16 @@ class NotesController < ApplicationController
 	@note = Note.find(params[:id])
 	@note.destroy
         respond_to do |format|
-  			format.html {redirect_to user_notes_path(current_user), notice: "note deleted"}
-  			format.js {head :no_content}
+          unless current_user.notes.count < 1
+  			     format.html {redirect_to user_notes_path(current_user), notice: "note deleted"}
+  			     format.js {head :no_content}
+          else
+             format.html {redirect_to search_path, notice: "note deleted"}
+             format.js {head :no_content}
+          end   
   		end
    end	
+
 
    def save_as_pdf
     @note = Note.find(params[:id])
@@ -57,6 +63,9 @@ class NotesController < ApplicationController
  def update
 	@note = Note.find(params[:id])
 	if @note.update(note_params)
+    # if @note.body.blank?
+    #   @note.update body: nil
+    # end
 		respond_to do |format|
 			format.html {redirect_to (current_user), notice: "note updated"}
 			format.json { respond_with_bip(@note) }

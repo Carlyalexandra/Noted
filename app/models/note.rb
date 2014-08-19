@@ -1,5 +1,6 @@
 class Note < ActiveRecord::Base
 	belongs_to :user
+	before_save :check_body
 	
 	def pdf(user)
 	    Prawn::Document.generate("public/#{self.title}.pdf") do |pdf|
@@ -16,6 +17,12 @@ class Note < ActiveRecord::Base
 	      :min_font_size => 10,
 	      :disable_wrap_by_char => true  
 	    end      
+	end
+
+	def check_body
+		if self.body.blank?
+			self.body = "Click here to begin."
+		end
 	end
 
 end

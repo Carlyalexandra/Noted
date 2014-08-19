@@ -1,3 +1,42 @@
 // Place all the styles related to the Notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.note_pad {
+	width: 600px;
+	height: 700px;
+	background: url(http://i.stack.imgur.com/ynxjD.png) repeat-y;
+ 	font: normal 14px verdana;
+ 	line-height: 25px;
+ 	padding: 2px 10px;
+ 	border: solid 1px #ddd;
+}
+
+#wrapperu {
+	padding-top: 5px;
+
+}
+
+#note_video, #note {
+	float: left;
+}
+
+#note_main {
+	width: 95%;
+	margin: 0 auto;
+}
+
+#note_video {
+	margin-right: 45px;
+}
+
+.title {
+	font-size: 20px;
+	text-align: center;
+}
+
+.notes_all {
+	margin-left: 60px;
+	font-size: 18px;
+	color: black;
+}

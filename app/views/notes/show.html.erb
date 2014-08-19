@@ -9,7 +9,7 @@
 		<%= link_to "Download PDF", save_as_pdf_path(@note), method: :post %>
 			<div class="note_pad">
 					<span class="title"><%=  @note.title %></span> <br><br>
-					<%= best_in_place @note, :body, :type => :textarea, :display_with => :simple_format, :nil => "click to start taking notes", :html_attrs => { :cols => '82', :rows => '7' }, :path => user_note_path(current_user, @note.id) %>
+					<%= best_in_place @note, :body, :type => :textarea, :display_with => :simple_format, :html_attrs => { :cols => '82', :rows => '7' }, :path => user_note_path(current_user, @note.id) %>
 
 			</div>
 		</div>

@@ -3,7 +3,7 @@
 
 <p>
 <b>First Name:</b> 
-<%= best_in_place current_user, :fname, :nil =>"name here" %>
+<%= best_in_place current_user, :fname %>
 </p>
 <p>
 	<b>Last Name:</b>
@@ -19,5 +19,5 @@
 <%= link_to "DELETE YOUR ACCOUNT", user_path(current_user), method: :delete, data: { confirm: 'Are you sure you want to delete your account? Once it is destroyed all your files will be lost.'} %>
 
 
-<%= link_to "Change password", edit_user_password_path %>
+<%# link_to "Change password", edit_user_password_path %>
 
