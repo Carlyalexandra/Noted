@@ -18,7 +18,7 @@
 			<% if !@q.blank? %>
 			<%= content_tag :h1, @q %>
 					<% @main.each do |video| %>
-						<%=	"<li id='videos_#{i}'><iframe width='400' height='250' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe><p>".html_safe %> <%= link_to 'Click to use this video', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title]}), {method: :post} %> <%= "</p><br><br></li>".html_safe %> 
+						<%=	"<li id='videos_#{i}'><iframe width='400' height='250' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe><p>".html_safe %> <%= link_to 'Click to use this video', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title]}), {method: :post} %><%= video[:thumbnail] %> <%= "</p><br><br></li>".html_safe %> 
 	
 						<% i += 1 %>
 					<% end %>
