@@ -11,20 +11,36 @@ before_action :authenticate_user!, except: :show
   end
 
   def show
-    
   end
 
   def edit
-
   end
 
   def update
+    @user = current_user
+    @user.update(user_params)
+    respond_to do |format|
+      format.html {redirect_to (current_user), notice: "user updated"}
+      format.json { respond_with_bip(@user) }
+    end
+  else
+     respond_to do |format|
+      format.html {render :edit}
+      format.json { respond_with_bip(@user) }
+    end
+  end 
     
-  end
 
   def destroy
-    @user.delete
+    @user = current_user
+      @user.destroy
+      redirect_to root_path
   end
-
+  
+  private 
+  
+  def user_params
+    params.require(:user).permit(:email)
+  end
 
 end

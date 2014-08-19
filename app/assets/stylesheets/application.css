@@ -22,13 +22,14 @@ h1 {
 }
 
 nav {
-	margin-left:10px;
+	margin-left: 10px;
 	margin-right: 10px;	
 	height: auto;
-	height:186px;
+	height:166px;
 	border-bottom: solid;
 	border-style: double;
-	// padding-top: 5px;
+	/*padding-top: 5px;*/
+	padding-bottom: 20px;
 }
 
 #logo {
@@ -36,7 +37,7 @@ nav {
 	margin-right: 40px;
 	padding-top: 10px;
 	float: left;
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
 }
 
 
@@ -126,5 +127,14 @@ nav {
 
 .title {
 	font-size: 20px;
-	text-decoration: none;
+	text-align: center;
 }
+
+.notes_all {
+	margin-left: 60px;
+	font-size: 18px;
+	color: black;
+}
+
+
+

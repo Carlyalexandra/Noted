@@ -1,8 +1,23 @@
-<h1>EDIT CURRENT USER HERE!!</h1>
+<h1>CURRENT USER HERE</h1>
 
-<%= form_for current_user do |f| %>
-	<%= f.text_field :email, placeholder: current_user.email %> <br>
-	<%= f.submit :change %>
-<% end %>
 
-<%= link_to "back to user", user_path(current_user) %>
+<p>
+<b>First Name:</b> 
+<%= best_in_place current_user, :fname, :nil =>"name here" %>
+</p>
+<p>
+	<b>Last Name:</b>
+	<%= best_in_place current_user, :lname %>
+</p>
+
+<b>Email:</b>
+<%= best_in_place current_user, :email %>
+</p>
+
+
+
+<%= link_to "DELETE YOUR ACCOUNT", user_path(current_user), method: :delete, data: { confirm: 'Are you sure you want to delete your account? Once it is destroyed all your files will be lost.'} %>
+
+
+<%= link_to "Change password", edit_user_password_path %>
+
