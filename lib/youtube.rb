@@ -47,7 +47,7 @@ class Youtube
         search_response.data.items.each do |search_result|
           case search_result.id.kind
             when 'youtube#video'
-              videos << {title: "#{search_result.snippet.title}", id: "#{search_result.id.videoId}"}
+              videos << {title: "#{search_result.snippet.title}", id: "#{search_result.id.videoId}", thumbnail: "#{search_result.snippet.thumbnails.default.url}"}
             # when 'youtube#channel'
             #   channels << "#{search_result.snippet.title} (#{search_result.id.channelId})"
             # when 'youtube#playlist'

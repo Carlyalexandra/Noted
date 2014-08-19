@@ -1,39 +1,31 @@
-<div id="wrapperu">
+<div class="container">
 	<br>
 	<div id="search_bar">
+		<%= render partial: 'shared/search' %>
+	</div> 
 	
-	<%= render partial: 'shared/search' %>
-	
-
-	</div>
-	<br>
-	<div id="main_show">
-		
-		
-
-		
-		<div id="video">
-			<ul id="vids"> 
+	<div id="slider">
+		<ul class="slides"> 
 			<% i = 1 %>
 			<% if !@q.blank? %>
 			<%= content_tag :h1, @q %>
-					<% @main.each do |video| %>
-						<%=	"<li id='videos_#{i}'><iframe width='400' height='250' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe><p>".html_safe %> <%= link_to 'Click to use this video', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title]}), {method: :post} %> <%= "</p><br><br></li>".html_safe %> 
-	
-						<% i += 1 %>
-					<% end %>
-				</ul>
-			<% elsif current_user.notes.count > 0 %>
-				<div><h1>at least one project</h1></div>
-			<% else %>
-				<div id="welcome_note">
-					<h1>Welcome to Noted!</h1>
-					<h2>Let's get started.<h2> <p>This is the place to start looking for videos you want to take notes on. <br>
-					Simply enter your topic into the search bar - and Youtube videos will come back on the that subject <br> After the vidoes appear, select the video you wish to take notes on. <br> We'll start a project for you and your first note. <br> It's that simple. <br> If you want to start a new project - click the "create project" button in the navigation. And we'lls start a new project for you. <br> If you want to add notes to your current project, we have a button for that.<br> Click the "add note page", and you'll get a new page. <br>  
-					</p>
-				</div>
-			<% end %>
-		</div>
-	</div>
+			<% @main.each do |video| %>
+				<%=	"<li class='slide' id='slide_#{i}'><iframe width='711' height='400' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe><p>".html_safe %> <%= link_to 'Click to use this video', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title]}), {method: :post} %> <%= image_tag "#{video[:thumbnail]}" %> <%= "</p><br><br></li>".html_safe %> 
 
+				<% i += 1 %>
+			<% end %>
+		</ul>
+
+		<% elsif current_user.notes.count > 0 %>
+			<div><h1>at least one project</h1></div>
+		<% else %>
+			<div id="welcome_note">
+				<h1>Welcome to Noted!</h1>
+				<h2>Let's get started.<h2> <p>This is the place to start looking for videos you want to take notes on. <br>
+				Simply enter your topic into the search bar - and Youtube videos will come back on the that subject <br> After the vidoes appear, select the video you wish to take notes on. <br> We'll start a project for you and your first note. <br> It's that simple. <br> If you want to start a new project - click the "create project" button in the navigation. And we'lls start a new project for you. <br> If you want to add notes to your current project, we have a button for that.<br> Click the "add note page", and you'll get a new page. <br>  
+				</p>
+			</div>
+		<% end %>
+	</div>
 </div>
+
