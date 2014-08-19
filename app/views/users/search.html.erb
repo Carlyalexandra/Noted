@@ -7,21 +7,26 @@
 
 	</div>
 	<br>
+	
 	<div id="main_show">
-		
-		
-
-		
-		<div id="video">
-			<ul id="vids"> 
-			<% if !@q.blank? %>
+		<% if @q %>
 			<%= content_tag :h1, @q %>
+		<% end  %>
+		<div id="video_player">
+		<ul>
+			<% @main.each do |video| %>
+				<%=	"<li id='videos_#{video[:id]}'><iframe width='711' height='400' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe><p>".html_safe %> <%= link_to 'Use this video', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title]}), {method: :post} %> <%= "</p><br><br></li>".html_safe %> 
+			<% end %>
+		</ul>
+		</div>	
+		<br><br>
+		<div id="video">
+		   <% if !@q.blank? %>
+				<ul id="vids">
 					<% @main.each do |video| %>
-					<%= image_tag "#{video[:thumbnail]}", class: "thumbnail" %>
+						<%= image_tag "#{video[:thumbnail]}", class: "thumbnail", data:{id: video[:id]} %>
 					<% end %>
 				</ul>
-			
-
 			<% elsif current_user.notes.count > 0 %>
 				<div><h1>at least one project</h1></div>
 			<% else %>

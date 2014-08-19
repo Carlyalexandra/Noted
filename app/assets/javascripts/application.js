@@ -32,6 +32,11 @@ $(document).on('ready page:load', function () {
 		$(event.target).closest('p').slideUp()
 	});
 
+
+	function update_player(data_id)
+		
+
+
 	$('.thumbnail').on('click', function () {
 		$('.thumbnail').fadeOut(function(){
 			$('#test').show()

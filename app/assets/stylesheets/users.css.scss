@@ -40,6 +40,11 @@
     border: solid black 1px;
 }
 
+#main_show h1 {
+	margin-left: 80px;
+	padding-bottom: 20px;
+}
+
 #welcome_note {
 	border: solid;
 }
@@ -55,24 +60,10 @@
 
 }
 
-#slider {
-	width:711px;
-	height:425px;
-	overflow: hidden;
-	margin-left: 200px;
-}
-
-#slider .slides {
-	display: block;
-	width: 6000px;
+#video_player {
+	border: solid;
 	height: 425px;
-	margin: 0;
-	padding: 0;
-}
-
-#slider .slide {
-	float: left;
-	list-style-type: none;
 	width: 711px;
-	height: 425px;
+	margin: 0 auto;
+
 }
