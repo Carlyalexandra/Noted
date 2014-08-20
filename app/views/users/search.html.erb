@@ -13,12 +13,10 @@
 			<%= content_tag :h1, @q %>
 		<% end  %>
 		<div id="video_player">
-			<% video = @main[0]  %>
-			
-				<%=	"<iframe width='711' height='400' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe><p>".html_safe %> <%= link_to 'Use this video', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title]}), {method: :post} %> <% "</p><br><br></li>".html_safe %> 
-	
-				
-		</div>
+				<% @main.each do |video| %>
+						<%=	"<p hidden id='videos_#{video[:id]}'><iframe width='711' height='400' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe></p>".html_safe %> <%# link_to 'Click to use this video', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title]}), {method: :post} %><%# "</p><br><br>".html_safe %> 
+					<% end %>				
+			</div>
 		
 		
 		<br><br>

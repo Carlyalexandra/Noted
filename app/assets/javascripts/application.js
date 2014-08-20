@@ -35,7 +35,7 @@ $(document).on('ready page:load', function () {
 
 	//function update_player(data_id)
 
-	var $id = $(this).data("id");
+	var id = $(this).data("id");
 
 	$('.thumbnail').on('click', function () {
 			$('#video_player').html($(this).data("id"));
