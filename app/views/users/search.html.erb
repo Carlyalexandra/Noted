@@ -7,24 +7,26 @@
 
 	</div>
 	<br>
+	
 	<div id="main_show">
 		
-		
-
-		
-		<div id="video">
-			<ul id="vids"> 
-			<% i = 1 %>
+	<div id="video">
 			<% if !@q.blank? %>
-			<%= content_tag :h1, @q %>
+				<% if @q %>
+				<%= content_tag :h1, @q %>
+				<% end  %>
+			<div id="video_player">
+				<% video = @main[0]  %>
+			
+				<%=	"<iframe width='711' height='400' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe><p>".html_safe %> 			
+			</div>
+				<ul id="vids">
 					<% @main.each do |video| %>
-						<%=	"<li id='videos_#{i}'><iframe width='400' height='250' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe><p>".html_safe %> <%= link_to 'Click to use this video', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title]}), {method: :post} %> <%= "</p><br><br></li>".html_safe %> 
-	
-						<% i += 1 %>
+						<li><p><%= image_tag "#{video[:thumbnail]}", class: "thumbnail", id: video[:id], data:{id: video[:id], title: video[:title]} %></p> <p><%= link_to 'Take Notes', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title]}), {method: :post} %> <% "</p><br><br></li>".html_safe %></p></li> 
 					<% end %>
 				</ul>
 			<% elsif current_user.notes.count > 0 %>
-				<div><h1>at least one project</h1></div>
+				<div><h1>ENTER A SEARCH INTO THE NAV BAR</h1></div>
 			<% else %>
 				<div id="welcome_note">
 					<h1>Welcome to Noted!</h1>

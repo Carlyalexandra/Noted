@@ -26,9 +26,29 @@ $(document).on('ready page:load', function () {
 	// })
 
 	
+	$('.video').hide();
 
-	$(".dismiss").on('click', function (event) {
+	$(".dismiss").on('click', function (event) {	
 		$(event.target).closest('p').slideUp()
 	});
+
+
+	//function update_player(data_id)
+
+	// var id = $(this).data("id");
+
+	$('.thumbnail').on('click', function () {
+			var id = $(this).data("id");
+			$('iframe').attr('src', "http://www.youtube.com/embed/"+id);
+		});
+
+	
+	
+	// $('.thumbnail').on('click', function () {
+	// 		$('#video_player').val($(this).data("id"));
+	// 	});
+
+
+
 
 });
