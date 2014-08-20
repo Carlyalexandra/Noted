@@ -1,23 +1,30 @@
-<h1>CURRENT USER HERE</h1>
+<div id="edit_wrapper">
+<br>
+	<div id="edit_info">	
+		<h1>Update your profile</h1>
+		<br>
+		<h2>We've kept it simple -- click on the element you want to update, and enter your changes.<br><br>
+		 It's that easy.</h2>
+	
+	<br>
+		<div id="edit_form">
+			<p class="name_info">
+			<b>First Name:</b> 
+			<%= best_in_place current_user, :fname %>
+			</p>
+			<p class="name_info">
+				<b>Last Name:</b>
+				<%= best_in_place current_user, :lname %>
+			</p>
+			<p class="name_info">
+			<b>Email:</b>
+			<%= best_in_place current_user, :email %>
+			</p>
+		</div>
+			
+		<br>
+		<%= link_to "delete your account", user_path(current_user), method: :delete, data: { confirm: 'Are you sure you want to delete your account? Once it is destroyed all your files will be lost.'} %>
 
-
-<p>
-<b>First Name:</b> 
-<%= best_in_place current_user, :fname %>
-</p>
-<p>
-	<b>Last Name:</b>
-	<%= best_in_place current_user, :lname %>
-</p>
-
-<b>Email:</b>
-<%= best_in_place current_user, :email %>
-</p>
-
-
-
-<%= link_to "DELETE YOUR ACCOUNT", user_path(current_user), method: :delete, data: { confirm: 'Are you sure you want to delete your account? Once it is destroyed all your files will be lost.'} %>
-
-
-<%# link_to "Change password", edit_user_password_path %>
-
+	<%# link_to "Change password", edit_user_password_path %>
+	</div>
+</div>

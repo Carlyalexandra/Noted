@@ -28,9 +28,14 @@
 				</ul>
 			<% elsif current_user.notes.count > 0 %>
 				<div id="enter_search">
-					<h2>Enter a serach into the bar about. For more detailed information, click the link below:</h2>
-					<%# link_to "Instruction", partial_path, :remote => true, :id => "welcome_reveal" %>
-					<div id="welcome_reveal">Instructions</div>
+					<h1>Enter a search into the bar above.</h1>
+					<p> For more detailed instructions, click <span id="welcome_reveal">here.</span></p>
+					<br>
+					
+					<br>
+					<div id="welcome_partial">
+						<%= render partial: 'welcome' %>
+					</div>
 				</div>
 			<% else %>
 				<div id="welcome_note">

@@ -9,13 +9,7 @@ before_action :authenticate_user!, except: :show
       @q = q
       @main = Youtube.new.main(q) 
   end
-
-  # def show_partial
-  #   respond_to do |format|               
-  #     format.js
-  #   end        
-  # end 
-
+  
   def show
   end
 
