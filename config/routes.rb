@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'search', to: 'users#search'
+  # get 'partial', to: 'user#show_partial'
 
   devise_for :users, :except => [:sign_in]
   resources :users do

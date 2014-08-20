@@ -45,7 +45,10 @@ $(document).on('ready page:load', function () {
 			$('iframe').attr('src', "http://www.youtube.com/embed/"+id);
 			$('#start').html(link)
 		});
-
+ 
+	$('#welcome_reveal').on('click', function(){
+		$(this).append("<%= j render partial: 'welcome' %>");
+	});
 	
 	
 	// $('.thumbnail').on('click', function () {
