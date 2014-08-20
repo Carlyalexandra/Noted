@@ -37,9 +37,13 @@ $(document).on('ready page:load', function () {
 
 	// var id = $(this).data("id");
 
+	$(".link_note").hide()
 	$('.thumbnail').on('click', function () {
+
 			var id = $(this).data("id");
+			var link = $(this).parent().parent().find(".link_note").children();
 			$('iframe').attr('src', "http://www.youtube.com/embed/"+id);
+			$('#start').html(link)
 		});
 
 	

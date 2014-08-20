@@ -9,6 +9,8 @@ class NotesController < ApplicationController
   end
 
   def show
+    q = params[:q].to_s
+    @q = q
     @note = Note.find(params[:id])
   end
 

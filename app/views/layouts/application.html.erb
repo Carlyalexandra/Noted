@@ -15,16 +15,17 @@
 			<nav>
 				<p id="logo"><%= link_to image_tag('logo_2.png'), search_path %></p>
 				<ul id="login">
+					<li><p id="welcome"><%= current_user.fname %> |  <%= link_to "log out", destroy_user_session_path, method: "delete" %></p></li>	
 					<li>
-						<%= link_to 'notes archive', user_notes_path(current_user) %>
+					<li><%= link_to "view account", edit_user_path(current_user) %>
+					</li>
+					<li>
+						<%= link_to 'saved notes', user_notes_path(current_user) %>
 					</li>
 					<li>
 						<%= link_to 'search', search_path %>
 					</li>
-					<li><%= link_to "view account", edit_user_path(current_user) %>
-					</li>
-					<li><p id="welcome"><%= current_user.fname %> |  <%= link_to "log out", destroy_user_session_path, method: "delete" %></p></li>		
-
+						
 					<% end %>	
 					<br>
 				</ul>	

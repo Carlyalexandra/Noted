@@ -1,7 +1,15 @@
 <div id="all_notes">
-	<ul>
-	<% @notes.each do |note| %>
-		<li><%= link_to note.title, user_note_path(current_user, note.id), class: "notes_all" %> | <%= link_to "x", user_note_path(current_user, note.id), method: "delete" %></li> 
-		<%end%>
-	</ul>
+	<% if !@notes.blank? %>	
+		<div id="notes_display">
+			<ul>
+			<% @notes.each do |note| %>
+				<li><%= link_to note.title, user_note_path(current_user, note.id), class: "notes_all" %> | <%= link_to "x", user_note_path(current_user, note.id), method: "delete" %></li> 
+				<%end%>
+			</ul>
+		</div>
+	<%else%>
+	<div id="no_notes">
+		<p>No Notes</p>
+	</div>
+	<%end%>
 </div>

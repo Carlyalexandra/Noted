@@ -28,17 +28,14 @@ nav {
 	margin-left: 10px;
 	margin-right: 10px;	
 	height: auto;
-	height:166px;
+	height:155px;
 	border-bottom: solid;
 	border-style: double;
-	/*padding-top: 5px;*/
-	padding-bottom: 20px;
 }
 
 #logo {
-	margin-top: 10px;
 	margin-right: 40px;
-	padding-top: 10px;
+	padding-top: 5px;
 	float: left;
 	/*margin-bottom: 20px;*/
 }
@@ -46,8 +43,9 @@ nav {
 
 #login li{
 	display: inline-block;
-	padding-left: 40px;
+	padding-left: 30px;
 	float: right;
+	font-size: 14px;
 }
 
 #login {
