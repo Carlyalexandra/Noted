@@ -42,6 +42,7 @@ $(document).on('ready page:load', function () {
 		});
 
 	
+	
 	// $('.thumbnail').on('click', function () {
 	// 		$('#video_player').val($(this).data("id"));
 	// 	});
