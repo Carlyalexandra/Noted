@@ -82,7 +82,7 @@ end
 
   private
   def note_params
-  	params.require(:note).permit(:user_id, :body, :title, :video_url)
+  	params.require(:note).permit(:user_id, :body, :title, :video_url, :thumbnail)
   end
 
   # def set_project

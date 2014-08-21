@@ -32,7 +32,7 @@
 
   <div class="login_wrapper">
     <div class="login_form" id="signin_form">
-      <h2>Log in</h2>
+      <h2>Log in...</h2>
       <h1 class="close">X</h1>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -43,7 +43,7 @@
           <%= f.password_field :password, autocomplete: "off" %></div>
 
         <% if devise_mapping.rememberable? -%>
-          <div class="input"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+          <div class="input"><%= f.check_box :remember_me %> <%= f.label :remember_me, id: "form_for" %></div>
         <% end -%>
 
         <div class="input"><%= f.submit "Log in" %></div>

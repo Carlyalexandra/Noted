@@ -30,16 +30,14 @@ nav {
 	margin-left: 10px;
 	margin-right: 10px;	
 	height: auto;
-	height:155px;
+	height:125px;
 	border-bottom: solid;
 	border-style: double;
 }
 
 #logo {
 	margin-right: 40px;
-	padding-top: 5px;
 	float: left;
-	/*margin-bottom: 20px;*/
 }
 
 
@@ -49,16 +47,21 @@ nav {
 	font-size: 14px;
 	border-top: solid 1px;
 	border-bottom: solid 1px;
-	padding: 40px;
+	padding: 20px;
 	border-radius: 10%;
 }
 
+#login a:hover {
+	color: black;
+	
+}
 #login a {
 	text-decoration: none;
+	color: grey;
 }
 
 #login {
-	padding-top: 20px;
+	padding-top: 15px;
 	padding-bottom: 30px;
 	text-align: left;
 	margin-right: 30px;

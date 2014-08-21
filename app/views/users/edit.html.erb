@@ -23,7 +23,7 @@
 		</div>
 			
 		<br>
-		<%= link_to "delete your account", user_path(current_user), method: :delete, data: { confirm: 'Are you sure you want to delete your account? Once it is destroyed all your files will be lost.'} %>
+		<%= link_to "delete your account", user_path(current_user), id: "delete_account", method: :delete, data: { confirm: 'Are you sure you want to delete your account? Once it is destroyed all your files will be lost.'} %>
 
 	<%# link_to "Change password", edit_user_password_path %>
 	</div>

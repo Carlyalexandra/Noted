@@ -10,14 +10,14 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require jquery.purr
-//= require best_in_place
-//= require turbolinks
-//= require_tree .
 
-//= require best_in_place
+
+
+
+
+
+
+
 
 $(document).on('ready page:load', function () {
 
@@ -60,7 +60,7 @@ $(document).on('ready page:load', function () {
 		});	
 	})
 	
-	$('#signin_form').hide()
+	// $('#signin_form').hide()
 	$('#sign_in').on('click', function() {
 		$('#main_page').hide(0, function () {
 			$('#signin_form').slideDown(300);
@@ -73,12 +73,7 @@ $(document).on('ready page:load', function () {
 		});
 	});
 
-	// $('.notes_title').hide()
-	// $('.display_thumb').on('mouseenter', function() {
-	// 		$('.notes_title').show();
-	// 	});
-	// $('.display_thumb').on('mouseleave', function() {
-	// 		$('.notes_title').hide();
-	// 	});
+
+
 
 });

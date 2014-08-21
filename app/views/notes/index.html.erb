@@ -1,15 +1,16 @@
 <div id="all_notes">
 	<% if !@notes.blank? %>	
+	<%= content_tag :h2, "Clicking image to view (and edit) note:" %>
 		<div id="notes_display">
-			<ul>
+			<ul id="notes_list">
 			<% @notes.each do |note| %>
-				<li><%= link_to note.title, user_note_path(current_user, note.id), class: "notes_all" %> | <%= link_to "x", user_note_path(current_user, note.id), method: "delete" %></li> 
+				<li><%= link_to (image_tag note.thumbnail), user_note_path(current_user, note.id), class: "display_thumb" %> <br><%= truncate(note.title, :length => 30, :separator => ' ')%> <br> <%= link_to "remove", user_note_path(current_user, note.id), method: "delete" %></li>
 				<%end%>
 			</ul>
 		</div>
 	<%else%>
 	<div id="no_notes">
-		<p>No Notes</p>
+		<p>You dont have any notes yet.</p>
 	</div>
 	<%end%>
 </div>

@@ -7,6 +7,8 @@
 	margin-top: -19px;
 	border-bottom: solid 4px;
 	position: relative;
+	font-size: 18px;
+	font-family:'Avant Garde';
 }
 
 .login_form:after {
@@ -15,12 +17,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('./chairs.JPG'); 
+    background-image: url('./comp3.JPG'); 
 	background-position: right center;
     width: 100%;
     height: 100%;
     opacity : 0.6;
     z-index: -1;
+ 	box-shadow: inset 0 0 60px rgba(0, 0, 0, 1);
  }
 
  .form_style {
@@ -30,32 +33,40 @@
  }
 
 .input {
-	margin-left: 400px;
+	margin-left: 520px;
 }
 
 .close {
 	padding-top: 10px;
-	margin-left: 620px;
+	margin-left: 780px;
+	width: 50px;
 	color: grey;
 }
+
 
 .close:hover {
 	color: black;
 }
 
 .login_form h2 {
-	padding-top: 200px;
-	font-size: 40px;
+	padding-top: 150px;
+	font-size: 46px;
 	margin-left: 400px;
+	font-family: 'Helvetica';
 }
 
 .login_form input {
-	width: 220px;
-	height: 25px;
+	width: 230px;
+	height: 28px;
 	border-radius: 5px;
 	margin-bottom: 10px;
 	background-color: #d3d3d3;
-
+	font-size: 18px;
+}
+#form_for {
+	margin-left: -210px;
+	padding-top: -10px;
+	font-size: 16px;
 }
 
 #main_page {
@@ -73,12 +84,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('./olives.JPG'); 
-	background-position: top center;
+    background-image: url('./comp2.JPG'); 
+	background-position: right center;
     width: 100%;
     height: 100%;
     opacity : 0.6;
     z-index: -1;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 1);
  }
 
 #list_root {

@@ -35,8 +35,63 @@
 	text-align: center;
 }
 
+// this is where the index styling starts....
+
 .notes_all {
-	margin-left: 60px;
 	font-size: 18px;
-	color: black;
+	margin: 10px;
+	font-family: 'Helvetica';
 }
+
+#all_notes {
+	width: 100%;
+	height: 800px;
+	position: relative;
+}
+
+#all_notes h2{
+	font-size: 20px;
+	padding-top: 20px;
+	margin-left: 20px;
+	font-weight: bold;	
+}
+
+#all_notes:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('./comp1.JPG'); 
+	background-position: right center;
+    width: 100%;
+    height: 100%;
+    opacity : 0.5;
+    z-index: -1;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 1);
+   
+ }
+
+ #notes_display{
+ 	width: 75%;
+ 	margin: 0 auto;
+ 	padding-top: 30px;
+ }
+
+ #notes_list li {
+ 	padding: 20px;
+ 	display: inline-block;
+ }
+
+#notes_list a {
+	text-decoration: none;
+}
+
+ #notes_list img {
+ 	border-radius: 10px;
+ }
+
+ #notes_list img:hover {
+ 	opacity: .6;
+ }
+
