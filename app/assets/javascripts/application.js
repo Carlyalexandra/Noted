@@ -51,10 +51,27 @@ $(document).on('ready page:load', function () {
 		$('#welcome_partial').toggle();
 	});
 	
+
+
+	$('#signup_form').hide()
+	$('#sign_up').on('click', function() {
+		$('#main_page').hide(0, function () {
+			$('#signup_form').slideDown(300);
+		});	
+	})
 	
-	// $('.thumbnail').on('click', function () {
-	// 		$('#video_player').val($(this).data("id"));
-	// 	});
+	$('#signin_form').hide()
+	$('#sign_in').on('click', function() {
+		$('#main_page').hide(0, function () {
+			$('#signin_form').slideDown(300);
+		});	
+	})
+	
+	$(".close").on('click', function (event) {	
+		$(event.target).closest('div').hide(0, function (){
+			$('#main_page').slideDown(300);
+		});
+	});
 
 
 

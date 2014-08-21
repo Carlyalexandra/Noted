@@ -1,7 +1,135 @@
-#login_form{
-	border: solid;
-	border-radius: 10px;
+
+.login_form{
 	padding: 30px;
-	width: 20%;
+	width: 100%;
+	height: 800px;
 	margin: 0 auto;
+	margin-top: -19px;
+	border-bottom: solid 4px;
+	position: relative;
+}
+
+.login_form:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('./chairs.JPG'); 
+	background-position: right center;
+    width: 100%;
+    height: 100%;
+    opacity : 0.6;
+    z-index: -1;
+ }
+
+ .form_style {
+ 	width: 50%;
+ 	margin: 0 auto;
+ 	border: solid;
+ }
+
+.input {
+	margin-left: 400px;
+}
+
+.close {
+	padding-top: 10px;
+	margin-left: 620px;
+	color: grey;
+}
+
+.close:hover {
+	color: black;
+}
+
+.login_form h2 {
+	padding-top: 200px;
+	font-size: 40px;
+	margin-left: 400px;
+}
+
+.login_form input {
+	width: 220px;
+	height: 25px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	background-color: #d3d3d3;
+
+}
+
+#main_page {
+	width: 100%;
+	height: 800px;
+	margin-top: -19px;
+	position: relative;
+	border-bottom: solid 4px;
+
+}
+
+#main_page:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('./olives.JPG'); 
+	background-position: top center;
+    width: 100%;
+    height: 100%;
+    opacity : 0.6;
+    z-index: -1;
+ }
+
+#list_root {
+	width: 90%;
+	margin:0 auto;
+	text-align: right;
+}
+
+#list_root li {
+	display: inline-block;
+	margin: 40px;
+	font-family: 'Calibri';
+	font-size: 20px;
+	cursor: pointer;
+	color: rbg(74,74,74);
+
+}
+
+#sign_up {
+	
+}
+
+#sign_up:hover, #sign_in:hover {
+	color: #A5C5FF;
+}
+
+.close {
+	cursor: pointer;
+}
+
+#root_info{
+	width:60%;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+#root_info h2 {
+	font-weight: bold;
+	font-size: 24px;
+	font-family:'Helvetica';
+}
+
+#root_info h1 {
+	font-size: 35px;
+}
+
+#root_info h3 {
+	font-size: 20px;
+	font-family:'Helvetica';
+}
+
+#root_info p {
+	font-size: 18px;
 }
