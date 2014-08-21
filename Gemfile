@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -45,14 +44,21 @@ end
 group :development do
 	gem 'spring'
 	gem 'quiet_assets'
-	gem 'annotate'        
+	gem 'annotate'
+	gem 'sqlite3'        
 end
 
 gem 'rest-client'
 gem 'json'
 gem 'bourbon'
-gem 'passenger',  group: :production
 
+group :production do
+	gem 'passenger'
+	gem 'rails_12factor'
+	gem 'pg'
+end
+
+ruby "2.1.1"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
