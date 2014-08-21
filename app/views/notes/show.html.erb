@@ -1,23 +1,28 @@
-
-<br><br>
-	<% if @q %>
-		<%= link_to 'Back', :back %>
-	<% end %>
+<div id="note_wrapper">
+	<div id="back_button">
+	<br>
+			<%= link_to image_tag('back.png'), :back, id: "back" %>
+			
+			<% if @note.next %>
+    			<%= link_to( image_tag('forward.png'), user_note_path(current_user, @note.next), id: "forward") %>
+    		<% end %>	
+	</div>
+	<br style="clear:both;">
 	<div id="note_main">	
 		<div id="note_video">
+		<br><br>
 			<%=	"<iframe width='560' height='315' src='//www.youtube.com/embed/#{@note.video_url}?rel=0' frameborder='0'></iframe><p>".html_safe %>
 		</div>
 		
 		<div id="note">
-		<%= link_to "Download PDF", save_as_pdf_path(@note), method: :post %>
+		<%= link_to "Download PDF", save_as_pdf_path(@note), method: :post, id: "PDF" %>
+		<br><br>
 			<div class="note_pad">
 					<span class="title"><%=  @note.title %></span> <br><br>
 					<%= best_in_place @note, :body, :type => :textarea, :display_with => :simple_format, :html_attrs => { :cols => '82', :rows => '7' }, :path => user_note_path(current_user, @note.id) %>
-
 			</div>
 		</div>
 	</div>
 <br style="clear:both;">
 
-<%= link_to "back to notes", user_notes_path(current_user) %>
-
+</div>

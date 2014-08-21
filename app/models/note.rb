@@ -25,4 +25,11 @@ class Note < ActiveRecord::Base
 		end
 	end
 
+	# def next_post
+	#   self.user.notes.first(:conditions => ["id > ?", id], :order => "id asc")
+	# end
+	def next
+  		Note.where(["id > ?", self.id]).first
+	end
+
 end
