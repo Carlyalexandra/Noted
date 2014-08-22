@@ -8,18 +8,20 @@
     		<% end %>	
 	</div>
 	<br style="clear:both;">
-	<div id="note_main">	
-		<div id="note_video">
-		<br><br>
-			<%=	"<iframe width='560' height='315' src='//www.youtube.com/embed/#{@note.video_url}?rel=0' frameborder='0'></iframe><p>".html_safe %>
-		</div>
-		
-		<div id="note">
-		<%= link_to "Download PDF", save_as_pdf_path(@note), method: :post, id: "PDF" %>
-		<br><br>
-			<div class="note_pad">
-					<span class="title"><%=  @note.title %></span> <br><br>
-					<%= best_in_place @note, :body, :type => :textarea, :display_with => :simple_format, :html_attrs => { :cols => '82', :rows => '7' }, :path => user_note_path(current_user, @note.id) %>
+	<div id="note_main">
+		<div id="centerer">	
+			<div id="note_video">
+			<br><br>
+				<%=	"<iframe width='560' height='315' src='//www.youtube.com/embed/#{@note.video_url}?rel=0' frameborder='0'></iframe><p>".html_safe %>
+			</div>
+			
+			<div id="note">
+			<%= link_to "Download PDF", save_as_pdf_path(@note), method: :post, id: "PDF" %>
+			<br><br>
+				<div id="note_pad">
+						<div id="title"><%=  @note.title %></div> <br>
+					<div id="note_body"><%= best_in_place @note, :body, :type => :textarea, :display_with => :simple_format, :html_attrs => { :cols => '74', :rows => '7' }, :path => user_note_path(current_user, @note.id) %></div>
+				</div>
 			</div>
 		</div>
 	</div>

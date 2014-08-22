@@ -18,6 +18,14 @@
 	background-color: rgba(255,253,127,0.2);
 }*/
 
+#notice, #alert {
+  font:'Helvetica';
+  color: green;
+  padding: .5em 1em;
+  border-bottom: 1px solid green;
+  background-color: #EBFAEB;
+  margin-top: 0px;
+}
 
 h1 {
 	font-size: 30px;
@@ -43,8 +51,8 @@ nav {
 	display: inline-block;
 	float: right;
 	font-size: 14px;
-	border-top: solid 1px;
-	border-bottom: solid 1px;
+	/*border-top: solid 1px;
+	border-bottom: solid 1px;*/
 	padding: 20px;
 	border-radius: 10%;
 }
@@ -66,7 +74,18 @@ nav {
 }
 
 
+textarea{
+	background-color: transparent;
+	border: 0;
+	font: normal 14px verdana;
+}
 
+textarea:focus, input:focus{
+    outline: 0;
+}
 
+*:focus {
+    outline: 0;
+}
 
 

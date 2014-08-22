@@ -14,16 +14,16 @@
 			<% if !@q.blank? %>
 			<div id="video_player">
 				<% video = @main[0]  %>
-			
 				<%=	"<iframe width='560' height='315' src='//www.youtube.com/embed/#{video[:id]}?rel=0' frameborder='0'></iframe><p>".html_safe %> 			
 			</div>
 			<div id="start">
 				
 			</div>
 				<ul id="vids">
-				<%= content_tag :h2, "*Select thumbnail to view videos with '#{@q}':" %>
+				<%= content_tag :h2, "Select to view videos with '#{@q}':" %>
 					<% @main.each do |video| %>
-						<li><p><%= image_tag "#{video[:thumbnail]}", class: "thumbnail", id: video[:id], data:{id: video[:id], title: video[:title]} %></p><p class="link_note"><%= link_to 'Click to Take Notes', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title], thumbnail: video[:thumbnail]}), {method: :post} %> <% "</p><br><br></li>".html_safe %></p></li> 
+						<li><p><%= image_tag "#{video[:thumbnail_def]}", class: "thumbnail", id: video[:id], data:{id: video[:id], title: video[:title]} %></p><p class="link_note"><%= link_to 'Click to Take Notes', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title], thumbnail: video[:thumbnail]}), {method: :post} %> <% "</p><br><br></li>".html_safe %></p></li> 
+
 					<% end %>
 				</ul>
 			<% elsif current_user.notes.count > 0 %>

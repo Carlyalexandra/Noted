@@ -25,6 +25,7 @@
 	color: rgb(203,224,239);
 	border: solid black 1px;
 	box-shadow: 1px 1px 0px grey;
+	font-size: 20px;
 }
 
 // #commit {
@@ -73,14 +74,19 @@
 
 #vids h2 {
 	font-weight: 520;
-	font-size: 16px;
-	font-family: 'Courier';
+	font-size: 18px;
+	font-family: 'Avant Garde';
 }
 
 #vids li {
 	display: inline-block;
 	padding: 5px;
 }
+
+// #vids img {
+// 	width: 50%;
+// 	height: 50%;
+// }
 
 .thumbnail {
 	border-radius: 10px;
@@ -101,7 +107,7 @@
 
 #wrapper_search {
 	width: 100%;
-	height: 800px;
+	height: 100vh;
 	position: relative;
 }
 
@@ -141,7 +147,7 @@
 
 #edit_wrapper {
 	width: 100%;
-	height: 800px;
+	height: 100vh;
 	position: relative;
 }
 
@@ -207,3 +213,5 @@
 #delete_account:hover {
 	background-color:rgb(178,179,160);
 }
+
+

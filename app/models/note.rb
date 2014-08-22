@@ -21,7 +21,7 @@ class Note < ActiveRecord::Base
 
 	def check_body
 		if self.body.blank?
-			self.body = "Click here to begin."
+			self.body = "Click Here"
 		end
 	end
 
