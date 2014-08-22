@@ -26,6 +26,7 @@ class Youtube
       opts = Trollop::options do
         opt :q, 'Search term', :type => String, :default => 'Taking Notes'
         opt :p, ""
+        opt :e, ""
         opt :max_results, 'Max results', :type => :int, :default => 16
       end
 
