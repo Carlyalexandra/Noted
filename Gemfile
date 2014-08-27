@@ -29,6 +29,7 @@ gem 'google-api-client'
 gem 'trollop'
 
 gem 'newrelic_rpm'
+gem 'aws-sdk'
 
 gem 'best_in_place', :git => 'https://github.com/aaronchi/best_in_place.git'
 gem 'jquery-ui-rails'
