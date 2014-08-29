@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   get 'search', to: 'users#search'
  
+  get 'pdf' => 'pdf#notes'
+
 
   devise_for :users, :except => [:sign_in]
   resources :users do

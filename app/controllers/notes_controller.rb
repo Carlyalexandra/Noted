@@ -49,13 +49,18 @@ class NotesController < ApplicationController
    end	
 
 
-   def save_as_pdf
+  def save_as_pdf
     @note = Note.find(params[:id])
     @note.pdf(current_user)
     #redirects to the PDF in the public folder
     @title = @note.title.to_s
-    redirect_to "/#{URI.escape(@title)}.pdf"        
-    end
+    redirect_to "/#{URI.escape(@title)}.pdf"      
+  end
+  
+  def pdf
+    
+  end
+
 
   def edit
   	@note = Note.find(params[:id])

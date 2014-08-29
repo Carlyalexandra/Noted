@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="note">
-			<%= link_to "Download PDF", save_as_pdf_path(@note), method: :post, id: "PDF" %>
+			<%= link_to "Download PDF", save_as_pdf_path(@note), method: :post, id: "PDF", target: "blank" %>
 			<br><br>
 				<div id="note_pad">
 						<div id="title"><%=  @note.title %></div> <br>
