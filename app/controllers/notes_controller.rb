@@ -57,11 +57,6 @@ class NotesController < ApplicationController
     redirect_to "/#{URI.escape(@title)}.pdf"      
   end
   
-  def pdf
-    
-  end
-
-
   def edit
   	@note = Note.find(params[:id])
   end
