@@ -107,7 +107,11 @@
 
 }
 
-#sign_up {
+#sign_up, #sign_in {
+	color: rgb(0,113,189);
+	border: solid 2px rgb(0,113,189);
+	padding: 20px;
+	border-radius: 10px;
 	
 }
 
@@ -124,7 +128,7 @@
 	margin: 0 auto;
 	margin-top: 100px;
 	text-align: center;
-	background-color: rgb(255,249,180);
+	background-color:  #FCF0AD;
 	padding: 80px;
 }
 
