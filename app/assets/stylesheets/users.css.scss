@@ -28,6 +28,22 @@
 	
 }
 
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgb(203,224,239);
+    opacity:  .5;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgb(203,224,239);
+    opacity:  .5;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgb(203,224,239);
+    opacity:  .5;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: rgb(203,224,239);
+}
+
 
 // #commit {
 //     height: 40px;
@@ -86,8 +102,9 @@
 #vids h2 {
 	// font-weight: 520;
 	font-size: 18px;
-	padding-bottom: 10px;
-	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-top: 30px;
+	color: rgb(203,224,239);
 }
 
 #vids li {

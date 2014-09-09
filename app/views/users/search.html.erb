@@ -21,7 +21,7 @@
 				<%= link_to 'Click to Take Notes', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title], thumbnail: video[:thumbnail]}), {method: :post} %>
 			</div>
 				<ul id="vids">
-				<%= content_tag :h2, "Select to view videos with '#{@q}':" %>
+				<%= content_tag :h2, "Click thumbnail below to view videos with '#{@q}':" %>
 					<% @main.each do |video| %>
 						<li><p><%= image_tag "#{video[:thumbnail_def]}", class: "thumbnail", id: video[:id], data:{id: video[:id], title: video[:title]} %></p><p class="link_note"><%= link_to 'Click to Take Notes', user_notes_path(current_user, note: { video_url: video[:id], title: video[:title], thumbnail: video[:thumbnail]}), {method: :post} %> <% "</p><br><br></li>".html_safe %></p></li> 
 

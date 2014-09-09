@@ -120,25 +120,34 @@
 }
 
 #root_info{
-	width:60%;
+	width:40%;
 	margin: 0 auto;
 	margin-top: 100px;
+	text-align: center;
+	background-color: rgb(255,249,180);
+	padding: 80px;
 }
 
 #root_info h2 {
 	font-weight: bold;
 	font-size: 24px;
+	color: rgb(0,113,189);
 }
 
 #root_info h1 {
 	font-size: 35px;
+	padding-bottom: 10px;
+	color: rgb(0,113,189);
 }
 
 #root_info h3 {
 	font-size: 20px;
-	font-family:'Helvetica';
+	color: rgb(162,154,145);
+
 }
 
 #root_info p {
 	font-size: 18px;
+	color: rgb(162,154,145);
+
 }
