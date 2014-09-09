@@ -58,22 +58,23 @@
 	width: 100%;
 	position: relative;
 	margin-top: -30px;
+	background-color: rgb(0,113,189);
 }
 
-#note_wrapper:after {
-	content : "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url('../images/olives.JPG'); 
-	background-position: center center;
-    width: 100%;
-    height: 100%;
-    opacity : 0.5;
-    z-index: -1;
-    box-shadow: inset 0 0 200px rgba(0, 0, 0, 1);
-}
+// #note_wrapper:after {
+// 	content : "";
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background-image: url('../images/olives.JPG'); 
+// 	background-position: center center;
+//     width: 100%;
+//     height: 100%;
+//     opacity : 0.5;
+//     z-index: -1;
+//     box-shadow: inset 0 0 200px rgba(0, 0, 0, 1);
+// }
 
 
 #back {
@@ -90,7 +91,7 @@ float: left;
 
 #PDF {
 	font-size: 15px;
-	font-family: 'Helvetica'
+	color: white;
 }
 // this is where the index styling starts....
 
@@ -102,8 +103,9 @@ float: left;
 
 #all_notes {
 	width: 100%;
-	height: 800px;
+	height: 100vh;
 	position: relative;
+	background-color: rgb(0,113,189);
 }
 
 #all_notes h2{
@@ -111,23 +113,24 @@ float: left;
 	padding-top: 20px;
 	margin-left: 20px;
 	font-weight: bold;	
+	color: white;
 }
 
-#all_notes:after {
-    content : "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url('../images/comp1.JPG'); 
-	background-position: right center;
-    width: 100%;
-    height: 100%;
-    opacity : 0.5;
-    z-index: -1;
-    box-shadow: inset 0 0 60px rgba(0, 0, 0, 1);
+// #all_notes:after {
+//     content : "";
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background-image: url('../images/comp1.JPG'); 
+// 	background-position: right center;
+//     width: 100%;
+//     height: 100%;
+//     opacity : 0.5;
+//     z-index: -1;
+//     box-shadow: inset 0 0 60px rgba(0, 0, 0, 1);
    
- }
+//  }
 
  #notes_display{
  	width: 85%;

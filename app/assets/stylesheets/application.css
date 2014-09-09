@@ -17,9 +17,11 @@
 /*html {
 	background-color: rgba(255,253,127,0.2);
 }*/
+html {
+	font-family: "Century Gothic";
+}
 
 #notice, #alert {
-  font:'Helvetica';
   color: green;
   padding: .5em 1em;
   border-bottom: 1px solid green;
@@ -37,8 +39,7 @@ h1 {
 nav {
 	height: auto;
 	height:125px;
-	border-bottom: solid;
-	border-style: double;
+	padding-bottom: 10px;
 }
 
 #logo {
@@ -63,7 +64,7 @@ nav {
 }
 #login a {
 	text-decoration: none;
-	color: grey;
+	color: rgb(0,113,189);
 }
 
 #login {

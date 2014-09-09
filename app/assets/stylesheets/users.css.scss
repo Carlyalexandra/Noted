@@ -19,14 +19,15 @@
 	border-radius: 9px;
 	padding: 0 16px;
 	width: 95%;
-	height: 40px;
-	border:medium none;
-	font-size: 12px;
+	height: 75px;
 	color: rgb(203,224,239);
-	border: solid black 1px;
-	box-shadow: 1px 1px 0px grey;
-	font-size: 20px;
+	border: solid white 3px;
+	// box-shadow: 1px 1px 0px white;
+	font-size: 28px;
+	font-family: "Century Gothic";
+	
 }
+
 
 // #commit {
 //     height: 40px;
@@ -40,8 +41,14 @@
 //     border: solid black 1px;
 // }
 
+#welcome {
+	color: #FFFFF0;
+	letter-spacing: 1px;
+}
+
 #welcome_note h1 {
 	padding-bottom: 20px;
+
 }
 
 #welcome_note, #enter_search {
@@ -51,19 +58,23 @@
 }
 
 #welcome h2 {
-	font-weight: bold;
-	font-size: 20px;
-	font-family:'Helvetica';
+	// font-weight: bold;
+	font-size: 25px;
+	// font-family:'Avant Garde';
 }
 
 #welcome h3 {
-	font-weight: bold;
-	font-size: 18px;
+	// font-weight: bold;
+	font-size: 20px;
 }
 
 #welcome h4 {
-	font-weight: bold;
+	// font-weight: bold;
 	font-size: 16px;
+}
+
+#start a {
+	color: white;
 }
 
 #vids {
@@ -73,9 +84,10 @@
 }
 
 #vids h2 {
-	font-weight: 520;
+	// font-weight: 520;
 	font-size: 18px;
-	font-family: 'Avant Garde';
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
 
 #vids li {
@@ -109,25 +121,29 @@
 	width: 100%;
 	height: 100vh;
 	position: relative;
+	background-color: rgb(0,113,189);
+
 }
 
-#wrapper_search:after {
-	content : "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url('../images/comp5.JPG'); 
-	background-position: right center;
-    width: 100%;
-    height: 100%;
-    opacity : 0.5;
-    z-index: -1;
-    box-shadow: inset 0 0 200px rgba(0, 0, 0, 1);
-}
+// #wrapper_search:after {
+// 	content : "";
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background-image: url('../images/comp5.JPG'); 
+// 	background-position: right center;
+//     width: 100%;
+//     height: 100%;
+//     opacity : 0.5;
+//     z-index: -1;
+//     box-shadow: inset 0 0 200px rgba(0, 0, 0, 1);
+// }
 
 #welcome_reveal {
-	cursor: pointer;	
+	cursor: pointer;
+	color: white;
+	margin: auto 0;	
 }
 
 #edit_info {
@@ -149,23 +165,24 @@
 	width: 100%;
 	height: 100vh;
 	position: relative;
+	background-color: rgb(0,113,189);
 }
 
 
-#edit_wrapper:after {
-    content : "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url('../images/chairs.JPG'); 
-	background-position: center center;
-    width: 100%;
-    height: 100%;
-    opacity : 0.5;
-    z-index: -1;
-    box-shadow: inset 0 0 200px rgba(0, 0, 0, 1);
- }
+// #edit_wrapper:after {
+//     content : "";
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background-image: url('../images/chairs.JPG'); 
+// 	background-position: center center;
+//     width: 100%;
+//     height: 100%;
+//     opacity : 0.5;
+//     z-index: -1;
+//     box-shadow: inset 0 0 200px rgba(0, 0, 0, 1);
+//  }
 
 #edit_info {
 	width: 48%;
@@ -193,11 +210,6 @@
 	margin: 0 auto;
 	padding: 25px;
 	width:40%;
-}
-
-
-#welcome_reveal {
-	color: grey;
 }
 
 #delete_account {
