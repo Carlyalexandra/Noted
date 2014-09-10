@@ -133,10 +133,15 @@
 #root_info{
 	width:40%;
 	margin: 0 auto;
-	margin-top: 60px;
 	text-align: center;
-	background-color:  #FCF0AD;
-	padding: 90px 30px 70px 30px;
+	background-image: url('../images/post-in.png');
+	background-position: bottom right;
+	padding: 30px 30px 130px 30px;
+}
+
+#root_info img {
+	padding-bottom: 40px;
+	margin-left: -50px;
 }
 
 #root_info h2 {
