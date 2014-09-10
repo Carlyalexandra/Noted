@@ -43,6 +43,7 @@
 }
 
 
+
 .close:hover {
 	color: black;
 }
@@ -62,6 +63,8 @@
 	background-color: #d3d3d3;
 	font-size: 18px;
 }
+
+
 #form_for {
 	margin-left: -210px;
 	padding-top: -10px;
@@ -93,17 +96,19 @@
  }
 
 #list_root {
-	width: 90%;
+	width: 100%;
 	margin:0 auto;
-	text-align: right;
+	// text-align: right;
 }
 
 #list_root li {
 	display: inline-block;
-	margin: 40px;
+	margin: 30px;
 	font-size: 20px;
 	cursor: pointer;
 	color: rbg(74,74,74);
+	border: solid;
+	margin-top: 50px;
 
 }
 
@@ -112,11 +117,13 @@
 	border: solid 2px rgb(0,113,189);
 	padding: 20px;
 	border-radius: 10px;
+	width: 150px;
 	
 }
 
 #sign_up:hover, #sign_in:hover {
 	color: #A5C5FF;
+	background-color: #FFEB71;
 }
 
 .close {
@@ -126,20 +133,19 @@
 #root_info{
 	width:40%;
 	margin: 0 auto;
-	margin-top: 100px;
+	margin-top: 60px;
 	text-align: center;
 	background-color:  #FCF0AD;
-	padding: 80px;
+	padding: 90px 30px 70px 30px;
 }
 
 #root_info h2 {
-	font-weight: bold;
-	font-size: 24px;
+	font-size: 30px;
 	color: rgb(0,113,189);
 }
 
 #root_info h1 {
-	font-size: 35px;
+	font-size: 40px;
 	padding-bottom: 10px;
 	color: rgb(0,113,189);
 }

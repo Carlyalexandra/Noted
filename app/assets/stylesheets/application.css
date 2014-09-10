@@ -22,16 +22,16 @@ html {
 }
 
 #notice, #alert {
-  color: green;
+  color: rgb(0,113,189);
   padding: .5em 1em;
-  border-bottom: 1px solid green;
-  background-color: #EBFAEB;
+  border-bottom: 1px solid blue;
+  background-color: rgb(203,224,239);
   margin-top: 0px;
 }
 
 h1 {
 	font-size: 30px;
-	font-weight: bold;
+
 }
 
 /*this is where the navigation is styled*/
